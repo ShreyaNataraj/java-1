@@ -83,9 +83,48 @@ public static int factorial(int n){
   }
   System.out.println("binary form of" + mynum + " " + binnum);
  }
-  public static void main(String args[]) {
-     dectobin(23);
+
+
+  public static int average(int a, int b, int c){
+    int aver = (a+b+c)/3;
+    return aver;
+
   }
+  public static boolean isEven(int n){
+    if(n%2==0){
+      return true;
+    }
+    return false;
+  }
+  public static boolean ispalindrome(int number){
+    int palindrome = number;
+    int reverse = 0;
+    while(number!=0){
+      int remainder = number%10;
+      reverse = reverse * 10 + remainder;
+      number=number/10;
+    }
+    if(reverse == palindrome){
+      return true;
+    }
+    else{
+      return false;
+    }
+  }
+ public static int sumofdigits(int n){
+  int sum = 0;
+  while(n>0){
+    int lastdigit = n%10;
+    sum+=lastdigit;
+    n=n/10;
+  }
+  return sum;
+ }
+
+  public static void main(String args[]){
+    System.out.println(sumofdigits(123));
+  }
+  
 }
 
 
